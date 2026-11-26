@@ -1,0 +1,554 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BM MOTORS · ავტოსერვისი · თბილისი</title>
+<meta name="description" content="BMW-ს სპეციალიზებული სერვისი თბილისში: დიაგნოსტიკა, ძრავი, გადაცემათა კოლოფი და სავალი ნაწილი. ნაწილები ადგილზეა, ღია ვართ ყოველდღე.">
+<meta property="og:title" content="BM MOTORS · ავტოსერვისი · თბილისი">
+<meta property="og:description" content="BMW-ს სპეციალიზებული სერვისი თბილისში: დიაგნოსტიკა, ძრავი, გადაცემათა კოლოფი და სავალი ნაწილი. ნაწილები ადგილზეა, ღია ვართ ყოველდღე.">
+<meta name="theme-color" content="#1C69D4">
+<script type="application/ld+json">{"@context": "https://schema.org", "@type": "AutoRepair", "name": "BM MOTORS", "alternateName": "BM MOTORS", "telephone": "+995574838838", "address": {"@type": "PostalAddress", "streetAddress": "38 Gantiadi St", "addressLocality": "Tbilisi", "addressCountry": "GE"}, "geo": {"@type": "GeoCoordinates", "latitude": 41.6989678, "longitude": 44.8236151}, "hasMap": "https://maps.google.com/?cid=6558851615275624986", "sameAs": ["https://www.facebook.com/61584706115413"], "aggregateRating": {"@type": "AggregateRating", "ratingValue": 4.9, "reviewCount": 170}, "openingHoursSpecification": [{"@type": "OpeningHoursSpecification", "dayOfWeek": "Monday", "opens": "10:00", "closes": "20:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Tuesday", "opens": "10:00", "closes": "20:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Wednesday", "opens": "10:00", "closes": "20:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Thursday", "opens": "10:00", "closes": "20:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Friday", "opens": "10:00", "closes": "20:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Saturday", "opens": "10:00", "closes": "20:30"}, {"@type": "OpeningHoursSpecification", "dayOfWeek": "Sunday", "opens": "10:00", "closes": "20:30"}], "availableLanguage": ["ka", "en", "ru"]}</script>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Manrope:wght@600;700;800&family=Noto+Sans+Georgian:wght@400;500;600;700;800&display=swap">
+<style>
+/* Auto-service variant of the clinic template: graphite ground, steel-blue accent, same sections. */
+:root{
+  --bg:#F3F4F6; --surface:#FFFFFF; --ink:#111418; --muted:#545C66; --line:#DDE1E6;
+  --accent:#1C69D4; --accent-ink:#FFFFFF; --soft:#E6EDF7; --warm:#E9A92C; --guess:#C98A12;
+  --display:"Manrope","Noto Sans Georgian",system-ui,sans-serif;
+  --body:"Inter","Noto Sans Georgian",system-ui,sans-serif;
+  --radius:14px; --wrap:1120px;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#0D0F12; --surface:#16191E; --ink:#E8EBEF; --muted:#9AA3AE; --line:#262B33;
+  --accent:#5B9BF0; --accent-ink:#04121F; --soft:#172131; --warm:#F2B544; --guess:#F2B544; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0D0F12; --surface:#16191E; --ink:#E8EBEF; --muted:#9AA3AE; --line:#262B33;
+  --accent:#5B9BF0; --accent-ink:#04121F; --soft:#172131; --warm:#F2B544; --guess:#F2B544; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.6 var(--body);-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--surface)}
+h1,h2,h3{font-family:var(--display);line-height:1.15;margin:0;text-wrap:balance;letter-spacing:-.01em}
+:lang(ka) h1,:lang(ka) h2,:lang(ka) h3{letter-spacing:0}
+p{margin:0}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px;border-radius:6px}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.ico{width:22px;height:22px;flex:none;stroke:currentColor;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round}
+
+/* demo ribbon */
+.demo{background:var(--ink);color:var(--bg);font-size:13px}
+.demo .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:6px 14px;padding-block:7px}
+.demo p{flex:1 1 220px;min-width:0}
+.demo button{font:600 12px/1 var(--body);background:transparent;color:inherit;border:1px solid currentColor;border-radius:99px;padding:6px 10px;cursor:pointer;opacity:.9}
+.demo .legend{flex-basis:100%;opacity:.8}
+body:not(.notes) .demo .legend{display:none}
+
+/* header */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--surface) 92%,transparent);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+header.top .wrap{display:flex;align-items:center;gap:20px;height:64px}
+.logo{display:flex;flex-direction:column;text-decoration:none;line-height:1}
+.logo b{font:800 20px/1 var(--display);letter-spacing:.16em}
+.logo span{font:600 10px/1 var(--body);letter-spacing:.32em;text-transform:uppercase;color:var(--accent);margin-top:5px}
+nav.main{display:none;gap:22px;margin-left:auto}
+nav.main a{text-decoration:none;font-weight:500;font-size:15px;color:var(--muted)}
+nav.main a:hover{color:var(--ink)}
+.langs{display:flex;gap:2px;margin-left:auto;background:var(--bg);border:1px solid var(--line);border-radius:99px;padding:3px}
+.langs button{font:600 12px/1 var(--body);border:0;background:transparent;color:var(--muted);padding:7px 10px;border-radius:99px;cursor:pointer}
+.langs button[aria-pressed="true"]{background:var(--ink);color:var(--bg)}
+header.top .hdr-book{display:none}
+@media (min-width:900px){nav.main{display:flex}.langs{margin-left:0}header.top .hdr-book{display:inline-flex}}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;font:600 15px/1 var(--body);text-decoration:none;border-radius:99px;padding:14px 20px;border:1px solid transparent;cursor:pointer;white-space:nowrap}
+.btn .ico{width:18px;height:18px}
+.btn-primary{background:var(--accent);color:var(--accent-ink)}
+.btn-primary:hover{filter:brightness(1.07)}
+.btn-ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn-ghost:hover{border-color:var(--ink)}
+.btn-wa{background:#1FA855;color:#fff}
+.btn-sm{padding:10px 16px;font-size:14px}
+
+/* hero */
+.hero{padding-block:44px 56px;background:radial-gradient(1100px 420px at 85% 0%,var(--soft),transparent 70%)}
+.hero .wrap{display:grid;gap:36px;align-items:center}
+@media (min-width:900px){.hero .wrap{grid-template-columns:1.15fr .85fr;gap:56px}.hero{padding-block:72px 84px}}
+.eyebrow{font:600 12px/1.2 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-size:clamp(34px,6vw,58px);font-weight:800;margin-top:14px}
+:lang(ka) .hero h1{font-size:clamp(30px,5.2vw,50px)}
+.hero .lead{font-size:18px;color:var(--muted);margin-top:18px;max-width:34em}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.rating{display:flex;align-items:center;gap:10px;margin-top:26px;font-size:14px;color:var(--muted);text-decoration:none}
+.rating strong{font:800 22px/1 var(--display);color:var(--ink)}
+.stars{color:var(--warm);letter-spacing:2px;font-size:15px}
+
+.card-now{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:22px;box-shadow:0 20px 50px -30px rgba(10,60,70,.35)}
+.status{display:flex;flex-wrap:wrap;align-items:center;gap:2px 10px;font-weight:600}
+.dot{width:10px;height:10px;border-radius:50%;background:#9AA9B0;flex:none}
+.dot.open{background:#1FA855;box-shadow:0 0 0 4px color-mix(in srgb,#1FA855 22%,transparent)}
+.status small{flex-basis:100%;padding-left:20px;font-weight:400;color:var(--muted);font-size:14px}
+.hgroups{margin:16px 0 0;display:grid;gap:0;font-variant-numeric:tabular-nums}
+.hgroups div{display:flex;justify-content:space-between;gap:12px;padding:10px 0;border-bottom:1px solid var(--line);font-size:16px}
+.hgroups div:last-child{border-bottom:0}
+.hgroups dt{color:var(--muted)}
+.hgroups dd{margin:0;font-weight:600}
+.hgroups .is-today dt,.hgroups .is-today dd{color:var(--accent);font-weight:700}
+.week{display:grid;grid-template-columns:repeat(7,1fr);gap:4px;margin-top:16px}
+.week div{display:flex;flex-direction:column;align-items:center;gap:6px;font-size:11px;color:var(--muted)}
+.week i{display:block;width:100%;height:72px;border-radius:6px;background:var(--bg);position:relative;overflow:hidden}
+.week i b{position:absolute;left:0;right:0;background:var(--soft);border-top:2px solid var(--accent)}
+.week .is-today{color:var(--ink);font-weight:700}
+.week .is-today i b{background:var(--accent)}
+.card-now .addr{display:flex;gap:10px;align-items:flex-start;margin-top:18px;padding-top:16px;border-top:1px solid var(--line);font-size:15px}
+.card-now .addr .ico{color:var(--accent);margin-top:1px}
+.card-now .row{display:flex;gap:8px;margin-top:16px;flex-wrap:wrap}
+.card-now .row .btn{flex:1 1 120px}
+
+/* highlights */
+.highs{border-block:1px solid var(--line);background:var(--surface)}
+.highs .wrap{display:grid;gap:0;grid-template-columns:1fr}
+@media (min-width:760px){.highs .wrap{grid-template-columns:repeat(3,1fr)}}
+.high{display:flex;gap:14px;align-items:flex-start;padding-block:20px}
+@media (min-width:760px){.high+.high{border-left:1px solid var(--line);padding-left:24px}}
+@media (max-width:759px){.high+.high{border-top:1px solid var(--line)}}
+.high .ico{color:var(--accent);width:26px;height:26px}
+.high b{display:block;font:700 15px/1.3 var(--display)}
+.high span{font-size:14px;color:var(--muted)}
+
+/* sections */
+section.sec{padding-block:64px}
+@media (min-width:900px){section.sec{padding-block:88px}}
+.sec-head{display:grid;gap:10px;margin-bottom:32px;max-width:640px}
+.sec-head h2{font-size:clamp(28px,4vw,40px);font-weight:800}
+.sec-head p{color:var(--muted);font-size:17px}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+
+.svc{display:grid;gap:14px;grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+.svc article{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px;display:grid;gap:10px;align-content:start}
+.svc .ico{width:34px;height:34px;color:var(--accent);stroke-width:1.5}
+.svc h3{font-size:18px;font-weight:700}
+.svc p{color:var(--muted);font-size:15px}
+
+.prices{display:grid;gap:28px}
+@media (min-width:900px){.prices{grid-template-columns:.8fr 1.2fr;align-items:start}}
+.ptable{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.ptable td{padding:14px 0;border-bottom:1px dashed var(--line);vertical-align:baseline}
+.ptable td:last-child{text-align:right;font-weight:600;white-space:nowrap;padding-left:16px}
+.ptable .tbd{color:var(--muted);font-weight:500}
+
+.team{display:grid;gap:16px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:860px){.team{grid-template-columns:repeat(3,1fr);gap:20px}}
+.doc{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:var(--radius);background:var(--surface);overflow:hidden;min-width:0}
+.ava{aspect-ratio:4/5;max-width:100%;width:100%;display:grid;place-items:center;font:800 clamp(28px,5vw,44px)/1 var(--display);color:var(--accent);background:repeating-linear-gradient(135deg,transparent 0 11px,color-mix(in srgb,var(--accent) 8%,transparent) 11px 12px),var(--soft);object-fit:cover}
+.doc div{padding:14px 16px 16px;min-width:0}
+.doc b{display:block;font:700 17px/1.3 var(--display)}
+.doc div span{display:block;font-size:14px;color:var(--muted);margin-top:2px}
+
+.revs{columns:1;column-gap:14px}
+@media (min-width:700px){.revs{columns:2}}
+@media (min-width:1000px){.revs{columns:3}}
+.rev{break-inside:avoid;margin:0 0 14px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
+.rev .stars{font-size:14px}
+.rev blockquote{margin:10px 0 14px;font-size:15.5px}
+.rev footer{font-size:13px;color:var(--muted);display:flex;justify-content:space-between;gap:8px}
+.rev footer b{color:var(--ink);font-weight:600}
+.revs-more{margin-top:12px}
+
+.intl{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.intl article{display:flex;gap:14px;padding:18px;border-radius:var(--radius);background:var(--bg);border:1px solid var(--line)}
+.intl .ico{color:var(--accent);margin-top:2px}
+.intl h3{font-size:16px;font-weight:700;margin-bottom:4px}
+.intl p{font-size:14.5px;color:var(--muted)}
+
+.gal{display:grid;gap:10px;grid-template-columns:repeat(2,1fr)}
+@media (min-width:760px){.gal{grid-template-columns:repeat(3,1fr)}}
+.ph{aspect-ratio:4/3;max-width:100%;border-radius:var(--radius);display:flex;flex-direction:column;justify-content:flex-end;padding:14px;color:var(--muted);font-size:13px;background:
+  repeating-linear-gradient(135deg,transparent 0 11px,color-mix(in srgb,var(--accent) 8%,transparent) 11px 12px),var(--soft)}
+.ph b{color:var(--ink);font:700 15px/1.2 var(--display)}
+
+.contact{display:grid;gap:20px}
+@media (min-width:900px){.contact{grid-template-columns:1fr 1fr}}
+.box{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:24px;min-width:0}
+.box h3{font-size:20px;font-weight:700;margin-bottom:14px}
+.hours{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+.hours td{padding:9px 0;border-bottom:1px solid var(--line)}
+.hours td:last-child{text-align:right}
+.hours tr.is-today td{font-weight:700;color:var(--accent)}
+.map{margin-top:18px;border-radius:14px;overflow:hidden;border:1px solid var(--line);aspect-ratio:16/10;max-width:100%;position:relative;background:var(--soft)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map-static{position:absolute;inset:0;display:grid;place-items:center;text-decoration:none;background:
+  linear-gradient(0deg,transparent 47%,var(--surface) 47% 53%,transparent 53%),
+  linear-gradient(90deg,transparent 30%,var(--surface) 30% 35%,transparent 35%),
+  linear-gradient(28deg,transparent 60%,var(--surface) 60% 64%,transparent 64%),
+  repeating-linear-gradient(0deg,transparent 0 38px,color-mix(in srgb,var(--line) 70%,transparent) 38px 40px),
+  repeating-linear-gradient(90deg,transparent 0 38px,color-mix(in srgb,var(--line) 70%,transparent) 38px 40px),var(--soft)}
+.map-static span{display:flex;align-items:center;gap:8px;background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:99px;font-weight:600;font-size:14px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px}
+.phone-line{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;font-size:15px;color:var(--muted)}
+.phone-line b{font:700 20px/1 var(--display);color:var(--ink);font-variant-numeric:tabular-nums;user-select:all}
+.copy{font:600 12px/1 var(--body);border:1px solid var(--line);background:transparent;color:var(--muted);border-radius:99px;padding:6px 10px;cursor:pointer}
+
+form.book{display:grid;gap:12px}
+.f2{display:grid;gap:12px}
+@media (min-width:560px){.f2{grid-template-columns:1fr 1fr}}
+label.fl{display:grid;gap:6px;font-size:13px;font-weight:600;color:var(--muted)}
+.fl input,.fl select,.fl textarea{font:400 16px/1.4 var(--body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:10px;padding:12px;width:100%;min-width:0}
+.fl textarea{min-height:84px;resize:vertical}
+.fl input:focus,.fl select:focus,.fl textarea:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+.ferr{color:#C2410C;font-size:13px;min-height:1em}
+.book .btn{justify-self:start}
+
+footer.site{padding-block:36px 120px;color:var(--muted);font-size:14px;border-top:1px solid var(--line)}
+footer.site .wrap{display:flex;flex-wrap:wrap;gap:12px 28px;justify-content:space-between;align-items:center}
+@media (min-width:900px){footer.site{padding-bottom:40px}}
+
+
+/* ---- photos (optional: hero.image, services[].image, intlImage, gallery[].src) ---- */
+.hero-media{display:grid;gap:0;min-width:0}
+.hero-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:26px;box-shadow:0 30px 60px -30px rgba(10,30,60,.45);background:var(--soft)}
+.has-photo .card-now{position:relative;margin:-56px 14px 0;padding:18px 20px}
+.has-photo .card-now .row,.has-photo .card-now .addr{display:none}
+.has-photo .card-now .hgroups div{padding:8px 0;font-size:15px}
+@media (min-width:900px){
+  .hero.has-photo .wrap{grid-template-columns:1fr 1fr;gap:56px}
+  .has-photo .hero-img{aspect-ratio:5/4}
+  .has-photo .card-now{margin:-88px 0 0 -40px;width:min(330px,80%)}
+}
+.svc article{transition:transform .2s ease,box-shadow .2s ease}
+.svc article:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(10,30,60,.45)}
+.svc article.has-img{padding:0;overflow:hidden;gap:0}
+.svc .svc-img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover;background:var(--soft)}
+.svc .svc-body{padding:0 20px 22px;display:grid;gap:8px;position:relative}
+.svc .has-img .ico{box-sizing:content-box;width:24px;height:24px;padding:10px;border-radius:14px;background:var(--surface);color:var(--accent);margin-top:-24px;box-shadow:0 8px 20px -10px rgba(10,30,60,.4);border:1px solid var(--line)}
+.why{display:grid;gap:24px;align-items:center}
+.why-img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:22px;background:var(--soft)}
+@media (min-width:900px){.why.has-img{grid-template-columns:1fr 1fr;gap:48px}.why.has-img .intl{grid-template-columns:1fr}}
+.gal img.ph{transition:transform .3s ease;object-fit:cover;padding:0;width:100%;height:100%}
+.gal .ph-wrap{overflow:hidden;border-radius:var(--radius);aspect-ratio:4/3}
+.gal .ph-wrap:hover img{transform:scale(1.04)}
+.ava.ini{color:#fff;background:radial-gradient(120% 80% at 20% 0%,color-mix(in srgb,var(--accent) 55%,#fff) 0%,var(--accent) 45%,color-mix(in srgb,var(--accent) 60%,#000) 100%);font-size:clamp(34px,6vw,56px);letter-spacing:.04em;position:relative}
+.ava.ini::after{content:"";position:absolute;inset:auto 0 0;height:40%;background:linear-gradient(transparent,rgba(0,0,0,.18))}
+.doc{transition:transform .2s ease,box-shadow .2s ease}
+.doc:hover{transform:translateY(-3px);box-shadow:0 18px 40px -26px rgba(10,30,60,.45)}
+@media (max-width:560px){
+  .svc article.has-img{grid-template-columns:112px 1fr;align-items:stretch}
+  .svc .svc-img{aspect-ratio:auto;height:100%;min-height:120px}
+  .svc .svc-body{padding:14px 14px 16px}
+  .svc .has-img .ico{display:none}
+  .svc .has-img h3{font-size:16px}.svc .has-img p{font-size:14px}
+}
+.credit{display:block;font-size:12px;opacity:.8;margin-top:4px}
+
+/* phone action bar */
+.bar{position:fixed;left:0;right:0;bottom:0;z-index:25;display:grid;grid-template-columns:1fr 1fr 1.3fr;gap:8px;background:var(--surface);border-top:1px solid var(--line);
+  padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px))}
+.bar .btn{padding:10px 6px;font-size:13.5px;min-width:0;white-space:normal;text-align:center;line-height:1.15}
+@media (min-width:900px){.bar{display:none}}
+
+/* guessed content markers */
+body.notes .guess{outline:2px dashed var(--guess);outline-offset:4px;border-radius:8px;position:relative}
+body.notes .guess::after{content:attr(data-tag);position:absolute;top:-11px;right:8px;font:700 10px/1 var(--body);letter-spacing:.04em;text-transform:uppercase;background:var(--guess);color:#1b1300;padding:4px 6px;border-radius:5px;z-index:2;pointer-events:none}
+</style>
+
+<div class="demo" id="demo"><div class="wrap"><p id="demoText"></p><button type="button" id="notesBtn"></button><p class="legend" id="notesLegend"></p></div></div>
+<header class="top"><div class="wrap">
+  <a class="logo" href="#top" id="logo"></a>
+  <nav class="main" id="nav"></nav>
+  <div class="langs" id="langs" role="group" aria-label="Language"></div>
+  <a class="btn btn-primary btn-sm hdr-book" href="#book" data-t="book"></a>
+</div></header>
+
+<main id="top">
+  <section class="hero" id="hero"><div class="wrap">
+    <div>
+      <p class="eyebrow" data-t="eyebrow"></p>
+      <h1 id="heroTitle"></h1>
+      <p class="lead" id="heroLead"></p>
+      <div class="ctas" id="heroCtas"></div>
+      <a class="rating" id="rating" target="_blank" rel="noopener"></a>
+    </div>
+    <div class="hero-media" id="heroMedia"><img class="hero-img" id="heroImg" alt="" hidden><aside class="card-now" id="nowCard"></aside></div>
+  </div></section>
+
+  <div class="highs"><div class="wrap" id="highs"></div></div>
+
+  <section class="sec" id="services"><div class="wrap">
+    <div class="sec-head"><h2 data-t="servicesTitle"></h2><p data-t="servicesLead"></p></div>
+    <div class="svc" id="svc"></div>
+  </div></section>
+
+  <section class="sec alt" id="prices"><div class="wrap prices">
+    <div class="sec-head"><h2 data-t="pricesTitle"></h2><p data-t="pricesLead"></p></div>
+    <div id="ptableWrap"></div>
+  </div></section>
+
+  <section class="sec" id="team"><div class="wrap">
+    <div class="sec-head"><h2 data-t="teamTitle"></h2><p data-t="teamLead"></p></div>
+    <div class="team" id="teamGrid"></div>
+  </div></section>
+
+  <section class="sec alt" id="reviews"><div class="wrap">
+    <div class="sec-head"><h2 data-t="reviewsTitle"></h2><p id="revSummary"></p></div>
+    <div class="revs" id="revs"></div>
+    <a class="btn btn-ghost revs-more" id="revMore" target="_blank" rel="noopener"></a>
+  </div></section>
+
+  <section class="sec" id="abroad"><div class="wrap">
+    <div class="sec-head"><h2 data-t="intlTitle"></h2><p data-t="intlLead"></p></div>
+    <div class="why" id="why"><img class="why-img" id="whyImg" alt="" hidden><div class="intl" id="intl"></div></div>
+  </div></section>
+
+  <section class="sec alt" id="gallery"><div class="wrap">
+    <div class="sec-head"><h2 data-t="galleryTitle"></h2></div>
+    <div class="gal" id="gal"></div>
+  </div></section>
+
+  <section class="sec" id="contact"><div class="wrap contact">
+    <div class="box">
+      <h3 data-t="contactTitle"></h3>
+      <p id="addrLine"></p>
+      <div class="phone-line"><b id="phoneText"></b><button type="button" class="copy" id="copyPhone"></button></div>
+      <div class="map" id="map"></div>
+      <div class="links" id="mapLinks"></div>
+      <h3 style="margin-top:28px" data-t="hoursTitle"></h3>
+      <table class="hours" id="hoursTable"></table>
+    </div>
+    <div class="box" id="book">
+      <h3 data-t="bookTitle"></h3>
+      <p style="color:var(--muted);margin-bottom:18px" data-t="bookLead"></p>
+      <form class="book" id="bookForm" novalidate>
+        <div class="f2">
+          <label class="fl"><span data-t="fName"></span><input id="f-name" name="name" autocomplete="name"></label>
+          <label class="fl"><span data-t="fPhone"></span><input id="f-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel"></label>
+        </div>
+        <div class="f2">
+          <label class="fl"><span data-t="fService"></span><select id="f-service" name="service"></select></label>
+          <label class="fl"><span data-t="fDate"></span><input id="f-date" name="date" type="date"></label>
+        </div>
+        <label class="fl"><span data-t="fNote"></span><textarea id="f-note" name="note"></textarea></label>
+        <p class="ferr" id="ferr" role="alert"></p>
+        <button class="btn btn-wa" type="submit" id="f-submit"></button>
+        <p class="phone-line" style="margin-top:0"><span data-t="orCall"></span> <b id="phoneText2"></b></p>
+      </form>
+      <a id="waOut" target="_blank" rel="noopener" hidden></a>
+    </div>
+  </div></section>
+</main>
+
+<footer class="site"><div class="wrap"><span id="foot"></span><span id="footLinks" class="links" style="margin:0"></span></div></footer>
+<div class="bar" id="bar"></div>
+
+<script type="application/json" id="clinic-data">{"_comment": "BM MOTORS demo content. Edit make.py and run it (it rebuilds the site). \"guess\": true = dashed 'to confirm' outline.", "slug": "bmmotors", "defaultLang": "ka", "name": {"ka": "BM MOTORS", "en": "BM MOTORS", "ru": "BM MOTORS"}, "brand": {"word": "BM MOTORS", "sub": "BMW SERVICE"}, "theme": {"accent": "#1C69D4", "accentDark": "#5B9BF0"}, "phone": "+995574838838", "phoneDisplay": "574 83 88 38", "whatsapp": {"number": "995574838838", "guess": true, "note": "Assumed the Maps mobile number is also on WhatsApp. Confirm."}, "instagram": null, "facebook": {"url": "https://www.facebook.com/61584706115413", "guess": true, "note": "Found via Google: page posting as BM Motors with the same number (574 838 838). Confirm it's theirs."}, "address": {"ka": "განთიადის ქ. 38, თბილისი", "en": "38 Gantiadi St, Tbilisi", "ru": "ул. Гантиади, 38, Тбилиси"}, "geo": {"lat": 41.6989678, "lng": 44.8236151}, "mapsUrl": "https://maps.google.com/?cid=6558851615275624986", "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=41.6989678,44.8236151", "rating": 4.9, "reviewCount": 170, "hours": [["10:00", "20:30"], ["10:00", "20:30"], ["10:00", "20:30"], ["10:00", "20:30"], ["10:00", "20:30"], ["10:00", "20:30"], ["10:00", "20:30"]], "hero": {"title": {"ka": "BM MOTORS", "en": "BM MOTORS", "ru": "BM MOTORS"}, "lead": {"ka": "BMW-ს სპეციალიზებული სერვისი თბილისში: დიაგნოსტიკა, ძრავი, გადაცემათა კოლოფი და სავალი ნაწილი. ნაწილები ადგილზეა, ღია ვართ ყოველდღე.", "en": "A BMW-only car service in Tbilisi: diagnostics, engine, gearbox and suspension. Parts in stock, open every day.", "ru": "Сервис только для BMW в Тбилиси: диагностика, двигатель, коробка передач и ходовая. Запчасти в наличии, работаем каждый день."}, "image": "https://images.unsplash.com/photo-1727893119356-1702fe921cf9?w=1600&h=1280&fit=crop&crop=entropy&q=72&fm=jpg", "imageAlt": {"ka": "ავტოსერვისის სახელოსნო", "en": "Car service workshop", "ru": "Мастерская автосервиса"}}, "highlights": [{"icon": "wrench", "title": {"ka": "4.9 ★ Google-ზე", "en": "4.9 ★ on Google", "ru": "4.9 ★ в Google"}, "text": {"ka": "170 მომხმარებლის შეფასება", "en": "From 170 customer reviews", "ru": "По 170 отзывам клиентов"}}, {"icon": "car", "title": {"ka": "მხოლოდ BMW", "en": "BMW specialists", "ru": "Только BMW"}, "text": {"ka": "ყველა სერია, ძველიდან ახლამდე", "en": "Older and newer models alike", "ru": "Старые и новые модели"}}, {"icon": "box", "title": {"ka": "ნაწილები ადგილზე", "en": "Parts in stock", "ru": "Запчасти в наличии"}, "text": {"ka": "ახალი და მეორადი", "en": "New and used", "ru": "Новые и б/у"}}], "services": [{"icon": "scan", "title": {"ka": "კომპიუტერული დიაგნოსტიკა", "en": "Computer diagnostics", "ru": "Компьютерная диагностика"}, "text": {"ka": "ძრავის, გადაცემათა კოლოფისა და ელექტრონიკის შემოწმება. ჯერ მიზეზს ვპოულობთ, მერე ვცვლით ნაწილს.", "en": "Engine, gearbox and electronics checked by computer. We find the cause before we replace anything.", "ru": "Проверка двигателя, коробки и электроники. Сначала находим причину, потом меняем деталь."}, "image": "https://images.unsplash.com/photo-1727893380169-4dda123e19f7?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "oil", "title": {"ka": "ზეთი და ფილტრები", "en": "Oil service & filters", "ru": "Масло и фильтры"}, "text": {"ka": "ძრავის ზეთის, ზეთის, ჰაერისა და სალონის ფილტრების შეცვლა BMW-ს მოთხოვნების მიხედვით.", "en": "Engine oil and oil, air and cabin filters, changed to BMW's specification.", "ru": "Замена моторного масла и масляного, воздушного и салонного фильтров по допускам BMW."}, "image": "https://images.unsplash.com/photo-1771340742493-52fbd5476ccb?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "engine", "title": {"ka": "ძრავი და ძრავის ჯაჭვი", "en": "Engine & timing chain", "ru": "Двигатель и цепь ГРМ"}, "text": {"ka": "ძრავის ჯაჭვის შეცვლა, ძრავის ბალიშები, გაგრილების სისტემა და ძრავის შეკეთება.", "en": "Timing chain replacement, engine mounts, cooling system and engine repairs.", "ru": "Замена цепи ГРМ, опор двигателя, система охлаждения и ремонт двигателя."}, "image": "https://images.unsplash.com/photo-1644761152591-4ae6dd643850?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "gear", "title": {"ka": "გადაცემათა კოლოფი", "en": "Gearbox & transfer case", "ru": "Коробка и раздатка"}, "text": {"ka": "გადაცემათა კოლოფის ზეთის, რედუქტორისა და განაწილების კოლოფის ზეთის შეცვლა.", "en": "Transmission fluid, differential and transfer case oil changes.", "ru": "Замена масла в коробке передач, редукторе и раздаточной коробке."}, "image": "https://images.unsplash.com/photo-1615906655593-ad0386982a0f?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "suspension", "title": {"ka": "სავალი ნაწილი და საჭე", "en": "Suspension & steering", "ru": "Ходовая и рулевое"}, "text": {"ka": "საჭის წევები, ბერკეტები, ამორტიზატორები და ზამბარები, მათ შორის დაბლა დასმა.", "en": "Tie rods, control arms, shocks and springs, including lowering springs.", "ru": "Рулевые тяги, рычаги, амортизаторы и пружины, в том числе занижение."}, "image": "https://images.unsplash.com/photo-1625047509168-a7026f36de04?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "brake", "title": {"ka": "სამუხრუჭე სისტემა", "en": "Brakes", "ru": "Тормоза"}, "text": {"ka": "სამუხრუჭე ხუნდებისა და დისკების შეცვლა, სამუხრუჭე სითხე.", "en": "Brake pads and discs, and brake fluid.", "ru": "Замена тормозных колодок и дисков, тормозная жидкость."}, "image": "https://images.unsplash.com/photo-1760317890314-e964ffd7e6a6?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "bolt", "title": {"ka": "ელექტრიკა და ანთება", "en": "Electrics & ignition", "ru": "Электрика и зажигание"}, "text": {"ka": "აკუმულატორის შეცვლა და რეგისტრაცია, სანთლები, კოჭები და ელექტრო შეკეთება.", "en": "Battery replacement with registration, spark plugs, coils and electrical repairs.", "ru": "Замена и регистрация аккумулятора, свечи, катушки и ремонт электрики."}, "image": "https://images.unsplash.com/photo-1771340012378-3c86cb649193?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}, {"icon": "box", "title": {"ka": "ნაწილები ადგილზე", "en": "Parts in stock", "ru": "Запчасти в наличии"}, "text": {"ka": "ახალი და მეორადი ნაწილები, ორიგინალი და უფრო იაფი ალტერნატივა. ნაწილის ძებნა არ მოგიწევთ.", "en": "New and used parts, genuine and cheaper alternatives, so you don't have to hunt for them.", "ru": "Новые и б/у запчасти, оригинал и более дешёвые аналоги. Искать детали не придётся."}, "image": "https://images.unsplash.com/photo-1595787142842-7404bc60470d?w=800&h=500&fit=crop&crop=entropy&q=72&fm=jpg"}], "pricesNote": {"guess": true, "note": "Placeholder. Fill in real prices from BM MOTORS."}, "prices": [{"name": {"ka": "კომპიუტერული დიაგნოსტიკა", "en": "Computer diagnostics", "ru": "Компьютерная диагностика"}, "price": null}, {"name": {"ka": "ძრავის ზეთისა და ფილტრის შეცვლა", "en": "Engine oil & filter change", "ru": "Замена масла и фильтра"}, "price": null}, {"name": {"ka": "სანთლების შეცვლა", "en": "Spark plug replacement", "ru": "Замена свечей"}, "price": null}, {"name": {"ka": "სამუხრუჭე ხუნდები (ერთი ღერძი)", "en": "Brake pads (one axle)", "ru": "Тормозные колодки (одна ось)"}, "price": null}, {"name": {"ka": "გადაცემათა კოლოფის ზეთის შეცვლა", "en": "Transmission fluid change", "ru": "Замена масла в АКПП"}, "price": null}, {"name": {"ka": "ძრავის ჯაჭვის შეცვლა", "en": "Timing chain replacement", "ru": "Замена цепи ГРМ"}, "price": null}], "teamNote": null, "team": [], "reviews": [{"author": "Nikusha Jikuri", "lang": "ka", "stars": 5, "text": "ყველაზე მაგარი მომსახურებაა რაც შეგიძლიათ BMW-ს მარკის ავტომობილზე მიიღოთ. კონკურენტული ფასები, იდეალური მომსახურება და მეგობრული გარემო. ნებისმიერ პრობლემას იპოვიან და აღმოფხვრიან ადგილზევე."}, {"author": "Gregory", "lang": "en", "stars": 5, "text": "I went to get my BMW's battery, spark plugs, and coils replaced. They used the AGM type battery (the same that is recommended by BMW) with the necessary amperage and they knew to register the new battery. They earned my trust."}, {"author": "Lucas Khubulava", "lang": "ka", "stars": 5, "text": "ძრავა გაფუჭებული G20 მივუყვანე შუადღეს და მეორე დღის ცხრა საათზე გამართული მანქანა გამატანეს. ფაქტიურად რამოდენიმე დღის საქმე 24 საათში გააკეთეს."}, {"author": "Barni", "lang": "en", "stars": 5, "text": "The guys really know and understand BMWs. They did everything quickly and efficiently, and their professionalism was palpable. The prices were reasonable, everything was to the point, and there was no pushiness."}, {"author": "Irakli Barkalaia", "lang": "ka", "stars": 5, "text": "ძალიან კმაყოფილი დავრჩი მომსახურებით. პროფესიონალური გუნდი, მაღალი ხარისხის სერვისი და პასუხისმგებლიანი დამოკიდებულება მომხმარებლის მიმართ."}, {"author": "Hawazen M.", "lang": "en", "stars": 5, "text": "Best service in Tbilisi, professional and friendly staff that know what they're doing. They even have the best lounge to relax and have amazing coffee."}], "text": {"intlTitle": {"ka": "რატომ BM MOTORS", "en": "Why BM MOTORS", "ru": "Почему BM MOTORS"}, "intlLead": {"ka": "რას ამბობენ მომხმარებლები ყველაზე ხშირად.", "en": "What customers mention most in their reviews.", "ru": "Что клиенты чаще всего отмечают в отзывах."}, "servicesLead": {"ka": "მხოლოდ BMW: დიაგნოსტიკიდან ძრავისა და კოლოფის შეკეთებამდე, ერთ ადგილას.", "en": "BMW only: from diagnostics to engine and gearbox work, all in one place.", "ru": "Только BMW: от диагностики до ремонта двигателя и коробки, всё в одном месте."}}, "intl": [{"icon": "car", "title": {"ka": "მხოლოდ BMW", "en": "Only BMW", "ru": "Только BMW"}, "text": {"ka": "ვმუშაობთ მხოლოდ BMW-ზე, ამიტომ პრობლემას სწრაფად ვპოულობთ.", "en": "We work only on BMWs, so we find problems fast.", "ru": "Работаем только с BMW, поэтому быстро находим проблему."}}, {"icon": "shield", "title": {"ka": "გამჭვირვალე ფასი", "en": "Clear prices, no pressure", "ru": "Честные цены"}, "text": {"ka": "გეტყვით რა არის საჭირო და რა ღირს. ზედმეტ სამუშაოს არ გთავაზობთ.", "en": "We tell you what's needed and what it costs, and we don't push extra work.", "ru": "Говорим, что нужно и сколько стоит. Лишнюю работу не навязываем."}}, {"icon": "coffee", "title": {"ka": "მოსაცდელი ყავით", "en": "Lounge with coffee", "ru": "Зона ожидания с кофе"}, "text": {"ka": "მეორე სართულზე კომფორტული მოსაცდელია, სადაც ყავის დალევა შეგიძლიათ.", "en": "A comfortable lounge on the second floor where you can wait with a coffee.", "ru": "Удобная зона ожидания на втором этаже, где можно выпить кофе."}}, {"icon": "clock", "title": {"ka": "ყოველდღე, 20:30-მდე", "en": "Every day until 20:30", "ru": "Каждый день до 20:30"}, "text": {"ka": "ვმუშაობთ შაბათ-კვირასაც, 10:00-დან 20:30-მდე.", "en": "Open weekends too, from 10:00 to 20:30.", "ru": "Работаем и в выходные, с 10:00 до 20:30."}}, {"icon": "chat", "title": {"ka": "ქართული, რუსული, ინგლისური", "en": "Georgian, Russian, English", "ru": "Грузинский, русский, английский"}, "text": {"ka": "აგიხსნით ყველაფერს თქვენთვის მოსახერხებელ ენაზე.", "en": "We explain everything in the language that suits you.", "ru": "Объясним всё на удобном вам языке."}, "guess": true, "note": "Russian is confirmed by a review; English is a guess (foreign customers mention a translator)."}], "intlImage": "https://images.unsplash.com/photo-1731988666621-474576a0475c?w=1200&h=900&fit=crop&crop=entropy&q=72&fm=jpg", "gallery": [{"label": {"ka": "სახელოსნო", "en": "Workshop", "ru": "Мастерская"}, "src": "https://images.unsplash.com/photo-1727893119356-1702fe921cf9?w=900&h=675&fit=crop&crop=entropy&q=72&fm=jpg"}, {"label": {"ka": "BMW", "en": "BMW", "ru": "BMW"}, "src": "https://images.unsplash.com/photo-1563969105242-37c55b40c5ae?w=900&h=675&fit=crop&crop=entropy&q=72&fm=jpg"}, {"label": {"ka": "ძრავი", "en": "Engine bay", "ru": "Двигатель"}, "src": "https://images.unsplash.com/photo-1619642751034-765dfdf7c58e?w=900&h=675&fit=crop&crop=entropy&q=72&fm=jpg"}, {"label": {"ka": "სამუშაო", "en": "At work", "ru": "В работе"}, "src": "https://images.unsplash.com/photo-1767681092416-bccf9410bda4?w=900&h=675&fit=crop&crop=entropy&q=72&fm=jpg"}, {"label": {"ka": "დისკი", "en": "Wheel", "ru": "Колесо"}, "src": "https://images.unsplash.com/photo-1577380785883-2c10a20538dd?w=900&h=675&fit=crop&crop=entropy&q=72&fm=jpg"}, {"label": {"ka": "ხელსაწყოები", "en": "Tools", "ru": "Инструменты"}, "src": "https://images.unsplash.com/photo-1637640125496-31852f042a60?w=900&h=675&fit=crop&crop=entropy&q=72&fm=jpg"}], "galleryNote": {"guess": true, "note": "Stock photos (Unsplash), not BM MOTORS. Replace with their own photos."}, "photosNote": "Stock photos, free Unsplash licence, loaded from Unsplash's image CDN.", "photoCredit": {"ka": "ფოტოები: Unsplash", "en": "Photos: Unsplash", "ru": "Фото: Unsplash"}, "_research": "Google Maps: 4.9 (170), 38 Gantiadi St, 574 83 88 38, open daily 10:00-20:30, 'Add website' shown (no site). FB posts mention Avlabari and BMW N20/N26 timing chain jobs. Reviews: BMW only, lounge with coffee on 2nd floor, parts in stock (new/used, genuine/cheaper), Russian-speaking mechanics, master Raphael named once. Two 1-star reviews (overpriced) with owner replies."}</script>
+<script type="application/json" id="i18n-data">{"ka": {"langName": "ქართ", "htmlLang": "ka", "nav": {"services": "სერვისები", "prices": "ფასები", "team": "ხელოსნები", "reviews": "შეფასებები", "contact": "კონტაქტი"}, "book": "სერვისზე ჩაწერა", "call": "დარეკვა", "whatsapp": "WhatsApp", "eyebrow": "ავტოსერვისი · თბილისი", "openNow": "ახლა ღიაა", "closedNow": "ახლა დახურულია", "until": "{t}-მდე", "opens": "გაიხსნება {d}, {t}-ზე", "today": "დღეს", "tomorrow": "ხვალ", "days": ["ორშაბათი", "სამშაბათი", "ოთხშაბათი", "ხუთშაბათი", "პარასკევი", "შაბათი", "კვირა"], "daysShort": ["ორშ", "სამ", "ოთხ", "ხუთ", "პარ", "შაბ", "კვი"], "closed": "დასვენება", "reviewsOnGoogle": "{n} შეფასება Google-ზე", "servicesTitle": "რას ვაკეთებთ", "servicesLead": "დიაგნოსტიკიდან ძრავისა და გადაცემათა კოლოფის შეკეთებამდე, ერთ ადგილას.", "pricesTitle": "ფასები", "pricesLead": "საორიენტაციო ფასები. ზუსტ ღირებულებას მანქანის დათვალიერების შემდეგ გეტყვით.", "priceFrom": "{p} ₾-დან", "priceTbd": "მალე", "pricesNoteText": "ფასებს სერვისი დაამატებს.", "teamTitle": "ჩვენი ხელოსნები", "teamLead": "ხელოსნები, რომლებიც თქვენს მანქანაზე იმუშავებენ.", "years": "{n} წლის გამოცდილება", "reviewsTitle": "მომხმარებლების შეფასებები", "allReviews": "ყველა შეფასება Google-ზე", "reviewFrom": "Google-ის შეფასება", "intlTitle": "რატომ ჩვენ", "intlLead": "", "galleryTitle": "სერვისი", "photoSoon": "აქ იქნება სერვისის ფოტო", "contactTitle": "გვესტუმრეთ", "hoursTitle": "სამუშაო საათები", "openMaps": "Google Maps-ში გახსნა", "directions": "მარშრუტი", "mapAlt": "რუკა: {a}", "bookTitle": "სერვისზე ჩაწერა", "bookLead": "შეავსეთ ფორმა და ის WhatsApp-ის შეტყობინებად გაიხსნება. გიპასუხებთ სამუშაო საათებში.", "fName": "სახელი", "fPhone": "ტელეფონი", "fService": "რა გჭირდებათ", "fServiceAny": "დიაგნოსტიკა / არ ვიცი", "fDate": "სასურველი დღე", "fNote": "მანქანა და პრობლემა", "fNotePh": "მაგ. BMW F30 320i, 2016, ანთია check engine", "fSubmit": "WhatsApp-ით გაგზავნა", "orCall": "ან დაგვირეკეთ", "fNeedName": "მიუთითეთ სახელი", "fNeedPhone": "მიუთითეთ ტელეფონი", "waHello": "გამარჯობა! მინდა სერვისზე ჩაწერა.", "copy": "კოპირება", "copied": "დაკოპირდა", "demoText": "სადემონსტრაციო საიტი · {name}", "notesShow": "შენიშვნების ჩვენება", "notesHide": "შენიშვნების დამალვა", "notesLegend": "პუნქტირით მონიშნული ინფორმაცია სავარაუდოა და სერვისმა უნდა დაადასტუროს.", "guessTag": "დასაზუსტებელი"}, "en": {"langName": "EN", "htmlLang": "en", "nav": {"services": "Services", "prices": "Prices", "team": "Mechanics", "reviews": "Reviews", "contact": "Contact"}, "book": "Book a service", "call": "Call", "whatsapp": "WhatsApp", "eyebrow": "Car service · Tbilisi", "openNow": "Open now", "closedNow": "Closed now", "until": "until {t}", "opens": "opens {d} at {t}", "today": "today", "tomorrow": "tomorrow", "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"], "daysShort": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"], "closed": "Closed", "reviewsOnGoogle": "{n} reviews on Google", "servicesTitle": "What we do", "servicesLead": "From diagnostics to engine and gearbox work, all in one place.", "pricesTitle": "Prices", "pricesLead": "Guide prices. We confirm the exact cost after looking at your car.", "priceFrom": "from ₾{p}", "priceTbd": "soon", "pricesNoteText": "The service will add its prices here.", "teamTitle": "Our mechanics", "teamLead": "The people who will work on your car.", "years": "{n} years' experience", "reviewsTitle": "What drivers say", "allReviews": "Read all reviews on Google", "reviewFrom": "Google review", "intlTitle": "Why us", "intlLead": "", "galleryTitle": "The workshop", "photoSoon": "Workshop photo goes here", "contactTitle": "Visit us", "hoursTitle": "Opening hours", "openMaps": "Open in Google Maps", "directions": "Directions", "mapAlt": "Map: {a}", "bookTitle": "Book a service", "bookLead": "Fill in the form and it opens as a WhatsApp message to the service. We reply during opening hours.", "fName": "Your name", "fPhone": "Phone", "fService": "What do you need?", "fServiceAny": "Diagnostics / not sure", "fDate": "Preferred day", "fNote": "Your car and the problem", "fNotePh": "e.g. BMW F30 320i, 2016, check engine light is on", "fSubmit": "Send on WhatsApp", "orCall": "or call", "fNeedName": "Please add your name", "fNeedPhone": "Please add a phone number", "waHello": "Hello! I'd like to book my car in.", "copy": "Copy", "copied": "Copied", "demoText": "Demo website prepared for {name}.", "notesShow": "Show notes", "notesHide": "Hide notes", "notesLegend": "Dashed outlines mark guessed details for the service to confirm.", "guessTag": "to confirm"}, "ru": {"langName": "RU", "htmlLang": "ru", "nav": {"services": "Услуги", "prices": "Цены", "team": "Мастера", "reviews": "Отзывы", "contact": "Контакты"}, "book": "Записаться", "call": "Позвонить", "whatsapp": "WhatsApp", "eyebrow": "Автосервис · Тбилиси", "openNow": "Сейчас открыто", "closedNow": "Сейчас закрыто", "until": "до {t}", "opens": "откроется {d} в {t}", "today": "сегодня", "tomorrow": "завтра", "days": ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"], "daysShort": ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"], "closed": "Выходной", "reviewsOnGoogle": "{n} отзывов в Google", "servicesTitle": "Что мы делаем", "servicesLead": "От диагностики до ремонта двигателя и коробки, всё в одном месте.", "pricesTitle": "Цены", "pricesLead": "Ориентировочные цены. Точную стоимость скажем после осмотра машины.", "priceFrom": "от {p} ₾", "priceTbd": "скоро", "pricesNoteText": "Сервис добавит сюда свои цены.", "teamTitle": "Наши мастера", "teamLead": "Мастера, которые будут работать с вашей машиной.", "years": "Опыт: {n}", "reviewsTitle": "Отзывы клиентов", "allReviews": "Все отзывы в Google", "reviewFrom": "Отзыв в Google", "intlTitle": "Почему мы", "intlLead": "", "galleryTitle": "Сервис", "photoSoon": "Здесь будет фото сервиса", "contactTitle": "Как нас найти", "hoursTitle": "Часы работы", "openMaps": "Открыть в Google Maps", "directions": "Маршрут", "mapAlt": "Карта: {a}", "bookTitle": "Запись на сервис", "bookLead": "Заполните форму, и она откроется как сообщение в WhatsApp. Мы ответим в рабочее время.", "fName": "Имя", "fPhone": "Телефон", "fService": "Что нужно сделать", "fServiceAny": "Диагностика / не знаю", "fDate": "Желаемый день", "fNote": "Машина и проблема", "fNotePh": "Например: BMW F30 320i, 2016, горит Check Engine", "fSubmit": "Отправить в WhatsApp", "orCall": "или позвоните", "fNeedName": "Укажите имя", "fNeedPhone": "Укажите телефон", "waHello": "Здравствуйте! Хочу записаться на сервис.", "copy": "Копировать", "copied": "Скопировано", "demoText": "Демо-версия сайта для {name}.", "notesShow": "Показать пометки", "notesHide": "Скрыть пометки", "notesLegend": "Пунктиром отмечены предположения, которые сервис должен подтвердить.", "guessTag": "уточнить"}}</script>
+<script>
+(function(){
+const C = JSON.parse(document.getElementById('clinic-data').textContent);
+const I = JSON.parse(document.getElementById('i18n-data').textContent);
+const BUILD = { embedMap: true };
+const LANGS = ['ka','en','ru'];
+let lang = C.defaultLang || 'ka';
+try { const s = localStorage.getItem('lang'); if (LANGS.includes(s)) lang = s; } catch(e){}
+const h = location.hash.slice(1); if (LANGS.includes(h)) lang = h;
+let notes = /[?&]notes\b/.test(location.search);
+try { if (localStorage.getItem('notes') === '1') notes = true; } catch(e){}
+
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const L = o => o == null ? '' : (typeof o === 'string' ? o : (o[lang] ?? o.en ?? o.ka ?? ''));
+const T = (k, v) => { let s = (C.text && C.text[k] && (C.text[k][lang] ?? C.text[k].en)) ?? I[lang][k] ?? I.en[k] ?? k; if (v) for (const x in v) s = s.replace('{'+x+'}', v[x]); return s; };
+const G = o => (o && o.guess) ? ` guess" data-tag="${esc(T('guessTag'))}" title="${esc(o.note||'')}` : '';
+const ruYears = n => { const a=n%10,b=n%100; return n+' '+(a===1&&b!==11?'год':(a>=2&&a<=4&&(b<10||b>=20)?'года':'лет')); };
+
+const ICONS = {
+  wrench:'<path d="M14.7 6.3a4 4 0 015 5l-2.2-.6-1.9 1.9.6 2.2a4 4 0 01-5-5L4 17.6a1.7 1.7 0 002.4 2.4l7.8-7.8"/>',
+  engine:'<path d="M4 10h2V8h3V6h6v2h2l2 3h1v5h-1l-2 2H9l-2-2H4z"/><path d="M2 12v3M10 11h4"/>',
+  gear:'<circle cx="12" cy="12" r="3"/><path d="M12 2.5v3M12 18.5v3M2.5 12h3M18.5 12h3M5.3 5.3l2.1 2.1M16.6 16.6l2.1 2.1M5.3 18.7l2.1-2.1M16.6 7.4l2.1-2.1"/>',
+  brake:'<circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.5"/><path d="M16 5.5a8 8 0 012.5 4"/>',
+  oil:'<path d="M12 3.5s-5 6-5 9.5a5 5 0 0010 0c0-3.5-5-9.5-5-9.5z"/>',
+  bolt:'<path d="M13 2.5L5 13.5h6l-1 8 8-11h-6z"/>',
+  car:'<path d="M3.5 16.5v-4l2-5a2 2 0 011.9-1.3h9.2a2 2 0 011.9 1.3l2 5v4"/><path d="M3.5 12.5h17M3.5 16.5h17"/><circle cx="7.5" cy="16.5" r="1.8"/><circle cx="16.5" cy="16.5" r="1.8"/>',
+  coffee:'<path d="M4 9h12v5a5 5 0 01-5 5H9a5 5 0 01-5-5z"/><path d="M16 10.5h1.5a2.5 2.5 0 010 5H16M8 3.5c0 1.5 1 1.5 1 3M12 3.5c0 1.5 1 1.5 1 3"/>',
+  box:'<path d="M3.5 7.5L12 3l8.5 4.5v9L12 21l-8.5-4.5z"/><path d="M3.5 7.5L12 12l8.5-4.5M12 12v9"/>',
+  clock:'<circle cx="12" cy="12" r="8.5"/><path d="M12 7.5V12l3 2"/>',
+  shield:'<path d="M12 3l7.5 3v5.5c0 4.5-3.2 8-7.5 9.5-4.3-1.5-7.5-5-7.5-9.5V6z"/><path d="M8.5 12l2.5 2.5 4.5-4.5"/>',
+  suspension:'<path d="M12 3v3M12 18v3"/><path d="M8 6h8M8 18h8"/><path d="M9 8l6 1.5-6 1.5 6 1.5-6 1.5 6 1.5"/>',
+  tooth:'<path d="M8 3.5c-2.5 0-4.5 2-4.5 4.6 0 2.6 1.1 4 1.8 6.2.7 2.4.9 6.2 2.8 6.2 1.7 0 1.6-4.8 3.9-4.8s2.2 4.8 3.9 4.8c1.9 0 2.1-3.8 2.8-6.2.7-2.2 1.8-3.6 1.8-6.2 0-2.6-2-4.6-4.5-4.6-1.6 0-2.4.9-4 .9s-2.4-.9-4-.9z"/>',
+  implant:'<path d="M7 3h10l-1 4H8z"/><path d="M9 7h6l-.6 3H9.6zM9.6 10h4.8l-.6 3h-3.6zM10.2 13h3.6l-.6 3h-2.4zM10.8 16h2.4L12 21z"/>',
+  braces:'<path d="M3 9c3 3 15 3 18 0M3 15c3-3 15-3 18 0"/><rect x="5.5" y="9.6" width="3" height="3" rx=".6"/><rect x="10.5" y="10.5" width="3" height="3" rx=".6"/><rect x="15.5" y="9.6" width="3" height="3" rx=".6"/>',
+  crown:'<path d="M4 9l3 3 5-6 5 6 3-3-1.5 9h-13z"/><path d="M6 20h12"/>',
+  canal:'<path d="M8 3.5c-2.5 0-4.5 2-4.5 4.6 0 2.6 1.1 4 1.8 6.2.7 2.4.9 6.2 2.8 6.2 1.7 0 1.6-4.8 3.9-4.8s2.2 4.8 3.9 4.8c1.9 0 2.1-3.8 2.8-6.2.7-2.2 1.8-3.6 1.8-6.2 0-2.6-2-4.6-4.5-4.6-1.6 0-2.4.9-4 .9s-2.4-.9-4-.9z"/><path d="M10 9v8M14 9v8"/>',
+  gum:'<path d="M3 10c2 4 16 4 18 0"/><path d="M6 12.5V17M10 13.5v4.5M14 13.5v4.5M18 12.5V17"/><path d="M8 5c1 1 1 2 0 3M12 4c1 1 1 2.5 0 3.5M16 5c1 1 1 2 0 3"/>',
+  surgery:'<path d="M14.5 3.5l6 6-9 9-6-6z"/><path d="M5.5 12.5L3 21l8.5-2.5"/>',
+  scan:'<path d="M4 8V5a1 1 0 011-1h3M16 4h3a1 1 0 011 1v3M20 16v3a1 1 0 01-1 1h-3M8 20H5a1 1 0 01-1-1v-3"/><path d="M4 12h16"/>',
+  globe:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c2.5 2.7 3.8 5.7 3.8 9S14.5 18.3 12 21c-2.5-2.7-3.8-5.7-3.8-9S9.5 5.7 12 3z"/>',
+  chat:'<path d="M4 5h16v11H9l-5 4z"/><path d="M8 9.5h8M8 12.5h5"/>',
+  calendar:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/><path d="M8.5 14.5l2 2 4-4"/>',
+  plane:'<path d="M21 15.5l-8-4V5a1.5 1.5 0 00-3 0v6.5l-8 4V18l8-2.5V19l-2.5 2h7L12 19v-3.5l8 2.5z" transform="translate(.5 -1)"/>',
+  card:'<rect x="3" y="5.5" width="18" height="13" rx="2"/><path d="M3 10h18M7 15h4"/>',
+  pin:'<path d="M12 21s-7-6.2-7-11.5a7 7 0 0114 0C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/>',
+  phone:'<path d="M5 4h3.5l1.5 4-2 1.5a11 11 0 005.5 5.5L15 13l4 1.5V18a2 2 0 01-2 2A14 14 0 013 6a2 2 0 012-2z"/>',
+  wa:'<path d="M4 20l1.2-4A8 8 0 1112 20a8 8 0 01-4-1.1z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1-1.5-2-1-1 .8a4.5 4.5 0 01-2.3-2.3l.8-1-1-2z" stroke-width="1.3"/>',
+  fb:'<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><path d="M13.5 20.5v-7h2.3l.4-2.7h-2.7V9.2c0-.8.3-1.3 1.4-1.3h1.4V5.5a18 18 0 00-2-.1c-2.1 0-3.4 1.2-3.4 3.5v1.9H8.5v2.7h2.4v7"/>',
+  insta:'<rect x="3.5" y="3.5" width="17" height="17" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17" cy="7" r=".8"/>',
+  book:'<rect x="3.5" y="5" width="17" height="15" rx="2"/><path d="M3.5 10h17M8 3v4M16 3v4"/>'
+};
+const ico = n => `<svg class="ico" viewBox="0 0 24 24" aria-hidden="true">${ICONS[n]||ICONS.wrench}</svg>`;
+
+const telHref = 'tel:' + C.phone;
+const waBase = 'https://wa.me/' + C.whatsapp.number;
+
+// Tbilisi clock
+function tbilisiNow(){
+  const p = new Intl.DateTimeFormat('en-GB',{timeZone:'Asia/Tbilisi',weekday:'short',hour:'2-digit',minute:'2-digit',hour12:false}).formatToParts(new Date());
+  const g = t => p.find(x=>x.type===t).value;
+  const day = ['Mon','Tue','Wed','Thu','Fri','Sat','Sun'].indexOf(g('weekday'));
+  return { day, min: (+g('hour')%24)*60 + +g('minute') };
+}
+const toMin = s => { const [a,b] = s.split(':'); return +a*60 + +b; };
+function openState(){
+  const n = tbilisiNow(), hr = C.hours;
+  const today = hr[n.day];
+  if (today && n.min >= toMin(today[0]) && n.min < toMin(today[1])) return { open:true, text: T('until',{t:today[1]}) };
+  for (let i=0;i<8;i++){
+    const d = (n.day+i)%7, x = hr[d];
+    if (!x) continue;
+    if (i===0 && n.min >= toMin(x[0])) continue;
+    const dn = i===0 ? T('today') : i===1 ? T('tomorrow') : I[lang].days[d];
+    return { open:false, text: T('opens',{d:dn,t:x[0]}) };
+  }
+  return { open:false, text:'' };
+}
+
+function render(){
+  const D = I[lang];
+  document.documentElement.lang = D.htmlLang;
+  document.body.classList.toggle('notes', notes);
+  document.querySelectorAll('[data-t]').forEach(el => el.textContent = T(el.dataset.t));
+
+  $('demoText').textContent = T('demoText',{name:L(C.name)});
+  $('notesBtn').textContent = notes ? T('notesHide') : T('notesShow');
+  $('notesLegend').textContent = T('notesLegend');
+
+  $('logo').innerHTML = `<b>${esc(C.brand.word)}</b><span>${esc(C.brand.sub)}</span>`;
+  $('logo').setAttribute('aria-label', L(C.name));
+  $('nav').innerHTML = ['services','prices','team','reviews','contact'].filter(k=>k!=='team'||(C.team&&C.team.length)).map(k=>`<a href="#${k}">${esc(D.nav[k])}</a>`).join('');
+  $('langs').innerHTML = LANGS.map(l=>`<button type="button" data-l="${l}" aria-pressed="${l===lang}" lang="${l}">${esc(I[l].langName)}</button>`).join('');
+
+  const hi = C.hero.image;
+  $('hero').classList.toggle('has-photo', !!hi);
+  if (hi){ $('heroImg').src = hi; $('heroImg').alt = L(C.hero.imageAlt) || L(C.name); $('heroImg').hidden = false; }
+  $('heroTitle').textContent = L(C.hero.title);
+  $('heroLead').textContent = L(C.hero.lead);
+  const waLink = `<a class="btn btn-wa${G(C.whatsapp)}" href="${waBase}?text=${encodeURIComponent(T('waHello'))}" target="_blank" rel="noopener">${ico('wa')}${esc(T('whatsapp'))}</a>`;
+  $('heroCtas').innerHTML = `<a class="btn btn-primary" href="#book">${ico('book')}${esc(T('book'))}</a>${waLink}<a class="btn btn-ghost" href="${telHref}">${ico('phone')}${esc(C.phoneDisplay)}</a>`;
+  $('rating').href = C.mapsUrl;
+  $('rating').innerHTML = `<strong>${C.rating.toFixed(1)}</strong><span class="stars" aria-hidden="true">★★★★★</span><span>${esc(T('reviewsOnGoogle',{n:C.reviewCount}))}</span>`;
+
+  const st = openState(), nd = tbilisiNow();
+  // group consecutive days with the same hours: "Mon–Fri 10:00–20:00"
+  const groups = [];
+  C.hours.forEach((x,i)=>{ const k = x ? x.join('–') : ''; const g = groups[groups.length-1];
+    if (g && g.k === k) { g.to = i; } else groups.push({k, from:i, to:i}); });
+  $('nowCard').innerHTML = `<p class="eyebrow" style="margin-bottom:14px">${esc(T('hoursTitle'))}</p>
+    <div class="status"><span class="dot${st.open?' open':''}"></span>${esc(st.open?T('openNow'):T('closedNow'))} <small>${esc(st.text)}</small></div>
+    <dl class="hgroups">${groups.map(g=>{
+      const today = nd.day>=g.from && nd.day<=g.to;
+      const days = g.from===g.to ? D.days[g.from] : `${D.daysShort[g.from]} – ${D.daysShort[g.to]}`;
+      return `<div class="${today?'is-today':''}"><dt>${esc(days)}</dt><dd>${g.k?esc(g.k.replace('–',' – ')):esc(D.closed)}</dd></div>`;}).join('')}</dl>
+    <p class="addr">${ico('pin')}<span>${esc(L(C.address))}</span></p>
+    <div class="row"><a class="btn btn-ghost btn-sm" href="${telHref}">${ico('phone')}${esc(T('call'))}</a><a class="btn btn-ghost btn-sm" href="${C.directionsUrl}" target="_blank" rel="noopener">${ico('pin')}${esc(T('directions'))}</a></div>`;
+
+  $('highs').innerHTML = C.highlights.map(x=>`<div class="high${G(x)}">${ico(x.icon)}<div><b>${esc(L(x.title))}</b><span>${esc(L(x.text))}</span></div></div>`).join('');
+
+  $('svc').innerHTML = C.services.map(s=> s.image
+    ? `<article class="has-img ${G(s).trim()}"><img class="svc-img" src="${esc(s.image)}" alt="${esc(L(s.title))}" loading="lazy"><div class="svc-body">${ico(s.icon)}<h3>${esc(L(s.title))}</h3><p>${esc(L(s.text))}</p></div></article>`
+    : `<article class="${G(s).trim()}">${ico(s.icon)}<h3>${esc(L(s.title))}</h3><p>${esc(L(s.text))}</p></article>`).join('');
+
+  $('ptableWrap').innerHTML = `<div class="${G(C.pricesNote).trim()}"><table class="ptable"><tbody>${C.prices.map(p=>`<tr><td>${esc(L(p.name))}</td><td>${p.price==null?`<span class="tbd">— ₾</span>`:esc(T('priceFrom',{p:p.price}))}</td></tr>`).join('')}</tbody></table>${C.prices.some(p=>p.price==null)?`<p style="margin-top:12px;font-size:14px;color:var(--muted)">${esc(T('pricesNoteText'))}</p>`:''}</div>`;
+
+  $('team').hidden = !(C.team && C.team.length);
+  $('teamGrid').className = 'team';
+  if (C.teamNote && C.teamNote.guess){ $('teamGrid').classList.add('guess'); $('teamGrid').dataset.tag = T('guessTag'); $('teamGrid').title = C.teamNote.note||''; }
+  $('teamGrid').innerHTML = C.team.map(d=>{
+    const nm = L(d.name), ini = (d.name.en||nm).split(' ').map(w=>w[0]).slice(0,2).join('');
+    const yrs = d.years ? (lang==='ru' ? 'Опыт: '+ruYears(d.years) : T('years',{n:d.years})) : '';
+    const pic = d.photo ? `<img class="ava" src="${esc(d.photo)}" alt="${esc(nm)}">` : `<span class="ava ini" aria-hidden="true">${esc(ini)}</span>`;
+    return `<div class="doc">${pic}<div><b>${esc(nm)}</b><span>${esc(L(d.role))}</span>${yrs?`<span>${esc(yrs)}</span>`:''}</div></div>`;}).join('');
+
+  $('revSummary').innerHTML = `<span class="stars">★★★★★</span> <b>${C.rating.toFixed(1)}</b> · ${esc(T('reviewsOnGoogle',{n:C.reviewCount}))}`;
+  $('revs').innerHTML = C.reviews.map(r=>`<figure class="rev" lang="${esc(r.lang)}"><span class="stars" aria-label="${r.stars}/5">${'★'.repeat(r.stars)}</span><blockquote>${esc(r.text)}</blockquote><footer><b>${esc(r.author)}</b><span>${esc(T('reviewFrom'))}</span></footer></figure>`).join('');
+  $('revMore').href = C.mapsUrl; $('revMore').textContent = T('allReviews') + ' →';
+
+  $('abroad').hidden = !(C.intl && C.intl.length);
+  $('why').classList.toggle('has-img', !!C.intlImage);
+  if (C.intlImage){ $('whyImg').src = C.intlImage; $('whyImg').alt = L(C.text && C.text.intlTitle) || ''; $('whyImg').hidden = false; }
+  $('intl').innerHTML = (C.intl||[]).map(x=>`<article class="${G(x).trim()}">${ico(x.icon)}<div><h3>${esc(L(x.title))}</h3><p>${esc(L(x.text))}</p></div></article>`).join('');
+
+  $('gal').className = 'gal';
+  if (C.galleryNote && C.galleryNote.guess){ $('gal').classList.add('guess'); $('gal').dataset.tag = T('guessTag'); $('gal').title = C.galleryNote.note||''; }
+  $('gal').innerHTML = C.gallery.map(g=> g.src ? `<div class="ph-wrap"><img class="ph" src="${esc(g.src)}" alt="${esc(L(g.label))}" loading="lazy"></div>` : `<div class="ph"><b>${esc(L(g.label))}</b><span>${esc(T('photoSoon'))}</span></div>`).join('');
+
+  $('addrLine').innerHTML = `${esc(L(C.address))}`;
+  $('phoneText').textContent = C.phoneDisplay; $('phoneText2').textContent = C.phoneDisplay;
+  $('copyPhone').textContent = T('copy');
+  $('map').innerHTML = BUILD.embedMap
+    ? `<iframe title="${esc(T('mapAlt',{a:L(C.address)}))}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://maps.google.com/maps?q=${C.geo.lat},${C.geo.lng}&z=17&hl=${lang}&output=embed"></iframe>`
+    : `<a class="map-static" href="${C.mapsUrl}" target="_blank" rel="noopener" aria-label="${esc(T('openMaps'))}"><span>${ico('pin')}${esc(L(C.name))}</span></a>`;
+  $('mapLinks').innerHTML = `<a class="btn btn-ghost btn-sm" href="${C.mapsUrl}" target="_blank" rel="noopener">${ico('pin')}${esc(T('openMaps'))}</a><a class="btn btn-ghost btn-sm" href="${C.directionsUrl}" target="_blank" rel="noopener">${esc(T('directions'))} →</a>`;
+  $('hoursTable').innerHTML = C.hours.map((x,i)=>`<tr class="${i===nd.day?'is-today':''}"><td>${esc(D.days[i])}</td><td>${x?x.join(' – '):esc(D.closed)}</td></tr>`).join('');
+
+  const sel = $('f-service'), cur = sel.value;
+  sel.innerHTML = `<option value="">${esc(T('fServiceAny'))}</option>` + C.services.map((s,i)=>`<option value="${i}">${esc(L(s.title))}</option>`).join('');
+  sel.value = cur;
+  $('f-note').placeholder = T('fNotePh');
+  const sub = $('f-submit'); sub.innerHTML = ico('wa') + esc(T('fSubmit'));
+  if (C.whatsapp.guess){ sub.classList.add('guess'); sub.dataset.tag = T('guessTag'); sub.title = C.whatsapp.note||''; }
+
+  $('foot').innerHTML = `${esc(`© ${new Date().getFullYear()} ${L(C.name)} · ${L(C.address)}`)}${C.photoCredit ? `<span class="credit">${esc(L(C.photoCredit))}</span>` : ''}`;
+  $('footLinks').innerHTML = (C.instagram ? `<a class="btn btn-ghost btn-sm" href="${C.instagram}" target="_blank" rel="noopener">${ico('insta')}Instagram</a>` : '')
+    + (C.facebook && C.facebook.url ? `<a class="btn btn-ghost btn-sm${G(C.facebook)}" href="${C.facebook.url}" target="_blank" rel="noopener">${ico('fb')}Facebook</a>` : '');
+
+  $('bar').innerHTML = `<a class="btn btn-ghost" href="${telHref}">${ico('phone')}${esc(T('call'))}</a><a class="btn btn-wa" href="${waBase}?text=${encodeURIComponent(T('waHello'))}" target="_blank" rel="noopener">${ico('wa')}WhatsApp</a><a class="btn btn-primary" href="#book">${esc(T('book'))}</a>`;
+}
+
+document.addEventListener('click', e => {
+  const b = e.target.closest('[data-l]');
+  if (b){ lang = b.dataset.l; try{localStorage.setItem('lang',lang)}catch(_){} render(); return; }
+  if (e.target.closest('#notesBtn')){ notes = !notes; try{localStorage.setItem('notes',notes?'1':'0')}catch(_){} render(); return; }
+  if (e.target.closest('#copyPhone')){
+    const btn = $('copyPhone');
+    const done = () => { btn.textContent = T('copied'); setTimeout(()=>btn.textContent=T('copy'),1500); };
+    try { navigator.clipboard.writeText(C.phone).then(done, ()=>selectPhone()); } catch(_) { selectPhone(); }
+  }
+});
+function selectPhone(){ const r=document.createRange(); r.selectNodeContents($('phoneText')); const s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+window.addEventListener('hashchange', () => { const x = location.hash.slice(1); if (LANGS.includes(x) && x!==lang){ lang = x; render(); } });
+
+$('bookForm').addEventListener('submit', e => {
+  e.preventDefault();
+  const v = id => $(id).value.trim();
+  const err = !v('f-name') ? T('fNeedName') : !v('f-phone') ? T('fNeedPhone') : '';
+  $('ferr').textContent = err;
+  if (err) return;
+  const s = $('f-service').value;
+  const lines = [T('waHello'), '', `${T('fName')}: ${v('f-name')}`, `${T('fPhone')}: ${v('f-phone')}`,
+    `${T('fService')}: ${s===''?T('fServiceAny'):L(C.services[+s].title)}`];
+  if (v('f-date')) lines.push(`${T('fDate')}: ${v('f-date')}`);
+  if (v('f-note')) lines.push(`${T('fNote')}: ${v('f-note')}`);
+  const a = $('waOut'); a.href = waBase + '?text=' + encodeURIComponent(lines.join('\n')); a.click();
+});
+
+render();
+setInterval(() => { const st = openState(); const el = document.querySelector('#nowCard .status'); if (el) el.querySelector('small').textContent = st.text; }, 60000);
+})();
+</script>
+
+</body>
+</html>
